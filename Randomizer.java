@@ -12,7 +12,6 @@ public class Randomizer
 {
     private static Random rand;
 
-
     /**
      * nextInt is a static method designed to return a random number between 1 and maxValue, inclusive
      * NOTE this is different than the behavior of the Random class default behavior which

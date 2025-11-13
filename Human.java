@@ -1,5 +1,3 @@
-
-
 /**
  * The Human class implements a wrapper for the base Creature class with the following additions
  * Implements a maximum/minimum strength for the creature type [20/5]
@@ -35,12 +33,8 @@ public class Human extends Creature
         super(
             Randomizer.nextInt(MAX_HUMAN_STR-MIN_HUMAN_STR)+MIN_HUMAN_STR,
             Randomizer.nextInt(MAX_HUMAN_HP-MIN_HUMAN_HP)+MIN_HUMAN_HP        
-        );
-          
+        ); 
     }
-    
-    
     // attack() - not overridden because Humans generate basic damage
     // takeDamage(int) - not overridden, because Humans take all damage assigned to them
-
 }

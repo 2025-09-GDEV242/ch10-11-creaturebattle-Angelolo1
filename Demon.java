@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Demon here.
+ * The Demon class represents a demonic creature.
  *
  * @author (your name)
  * @version (a version number or a date)

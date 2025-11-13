@@ -3,6 +3,7 @@
 /**
  * The CyberDemon class implements a wrapper for the base Creature class with the following additions
  * Implements a maximum/minimum strength for the creature type [40/20]
+ * (with chance of bonus damage)
  * Implements a maximum/minimum hitpoint total for the creature type [100/25]
  * 
  * @author Bill Crosbie
@@ -11,10 +12,10 @@
 public class CyberDemon extends Demon
 {
     // instance variables - replace the example below with your own
-    private static final int MAX_CYBERDEMON_HP = 100;
-    private static final int MIN_CYBERDEMON_HP = 25;
-    private static final int MAX_CYBERDEMON_STR = 40;
-    private static final int MIN_CYBERDEMON_STR = 20;
+    private static final int MAX_CYBER_HP = 100;
+    private static final int MIN_CYBER_HP = 25;
+    private static final int MAX_CYBER_STR = 40;
+    private static final int MIN_CYBER_STR = 20;
 
     /**
      * Constructor for objects of class CyberDemon -
@@ -33,8 +34,8 @@ public class CyberDemon extends Demon
         // max-min is range of values
         // range + min ensures that the values don't start at one.
         super(
-            Randomizer.nextInt(MAX_CYBERDEMON_STR-MIN_CYBERDEMON_STR)+MIN_CYBERDEMON_STR,
-            Randomizer.nextInt(MAX_CYBERDEMON_HP-MIN_CYBERDEMON_HP)+MIN_CYBERDEMON_HP        
+            Randomizer.nextInt(MAX_CYBER_STR-MIN_CYBER_STR)+MIN_CYBER_STR,
+            Randomizer.nextInt(MAX_CYBER_HP-MIN_CYBER_HP)+MIN_CYBER_HP        
         );
           
     }

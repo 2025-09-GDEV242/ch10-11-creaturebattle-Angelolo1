@@ -1,10 +1,8 @@
-
-
 /**
  * The Balrog class implements a wrapper for the base Creature class with the following
  * additions
  * Implements a maximum/minimum strength for the creature type [100/50]
- * (attacking TWICE each round)
+ * (attacking TWICE each round with change of bonus damage)
  * Implements a maximum/minimum hitpoint total for the creature type [200/80]
  * 
  * @author Bill Crosbie
@@ -41,16 +39,17 @@ public class Balrog extends Demon
           
     }
     
-    public int attack() {
-        int totalDamage;    //give a place to hold a value returned from creature
-        
-        totalDamage = super.attack();   //ask creature to compute the damage due to strength
-        
-        //roll the dice, and if in range, double the damage value
-        if (Randomizer.nextInt(10) == 10) totalDamage = totalDamage * 2;
-        
-        return totalDamage;
+    /**
+     * Balrog attacks twice per round
+     * Each attack uses the demon attack
+     * (chance of granting bonus damage)
+     * 
+     */
+    @Override
+    public int attack() 
+    {
+        int firstAttack = super.attack();  // calls Demon.attack()
+        int secondAttack = super.attack(); // calls Demon.attack() again
+        return firstAttack + secondAttack;
     }
-    // attack() - not overridden because Humans generate basic damage
-
 }

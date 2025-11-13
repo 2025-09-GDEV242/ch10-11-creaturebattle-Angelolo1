@@ -1,33 +1,38 @@
-
 /**
  * The Demon class represents a demonic creature.
+ * Demons have a 5% chance to do magical damage (+50).
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Angelo Martino
+ * @version 1.0
  */
-public class Demon extends Creature
+public abstract class Demon extends Creature
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
-     * Constructor for objects of class Demon
+     * Constructor for Demon object
+     * 
+     * @param str strength value
+     * @param hp hit points value
      */
-    public Demon()
+    public Demon(int str, int hp)
     {
-        // initialise instance variables
-        x = 0;
+        super(str, hp);
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Calculates attack damage for a demon
+     * Gets base damage from creature and adds bonus if triggered.
+     * 
+     * @return total damage dealth
      */
-    public int sampleMethod(int y)
+    @Override
+    public int attack()
     {
-        // put your code here
-        return x + y;
+        int damage = super.attack();
+        
+        if (Randomizer.nextInt(100) <=5)
+        {
+            damage += 50;
+        }
+        return damage;
     }
 }

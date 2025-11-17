@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class CreatureWar
 {
-    public static void main (String[] args)
+    public void war ()
     {
         System.out.println("=== Building Armies ===");
 

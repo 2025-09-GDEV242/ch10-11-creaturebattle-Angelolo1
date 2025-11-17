@@ -15,11 +15,11 @@ public class ArmyBuilder
     public static ArrayList<Creature> buildGoodArmy() 
     {
         ArrayList<Creature> army = new ArrayList<>();
-        
+
         // builds 100 good creatures
         for (int i = 0; i < 100; i++) {
             int roll = Randomizer.nextInt(10) + 1; // 1-10
-            
+
             if (roll <= 6) {
                 army.add(new Human());
             }
@@ -40,13 +40,13 @@ public class ArmyBuilder
     public static ArrayList<Creature> buildEvilArmy() 
     {
         ArrayList<Creature> army = new ArrayList<>();
-        
+
         int armySize = Randomizer.nextInt(10) + 40; // 40-49
-        
+
         // builds 100 good creatures
         for (int i = 0; i < armySize; i++) {
             int roll = Randomizer.nextInt(25) + 1; // 1-10
-            
+
             if (roll <= 18) {
                 army.add(new Goblin());
             }

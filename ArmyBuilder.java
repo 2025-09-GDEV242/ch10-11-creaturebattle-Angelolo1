@@ -43,7 +43,7 @@ public class ArmyBuilder
 
         int armySize = Randomizer.nextInt(10) + 40; // 40-49
 
-        // builds 100 good creatures
+        // builds 40-49 evil creatures
         for (int i = 0; i < armySize; i++) {
             int roll = Randomizer.nextInt(25) + 1; // 1-10
 

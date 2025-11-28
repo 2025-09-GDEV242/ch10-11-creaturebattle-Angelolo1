@@ -33,7 +33,7 @@ public class Elf extends Creature
     }
     
     /**
-     * 10% change to deal double damage
+     * 20% change to deal double damage
      * 
      * @return the total damage dealt by elf
      * 
@@ -42,7 +42,7 @@ public class Elf extends Creature
         int damage = super.attack(); 
         
         //roll the dice, and if in range, double the damage value
-        if (Randomizer.nextInt(10) == 10) damage = damage * 2;
+        if (Randomizer.nextInt(5) == 5) damage = damage * 2;
         
         return damage;
     }
